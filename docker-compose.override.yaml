@@ -14,8 +14,6 @@ services:
       - ./librechat.yaml:/app/librechat.yaml
     environment:
       - MONGO_URI=${MONGO_URI}
-    network_mode: "host"
-    ports: []
 
 # # BUILD FROM LATEST IMAGE
 #   api:
