@@ -15,6 +15,7 @@ services:
     environment:
       - MONGO_URI=${MONGO_URI}
     network_mode: "host"
+    ports: []
 
 # # BUILD FROM LATEST IMAGE
 #   api:
