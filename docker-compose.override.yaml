@@ -12,8 +12,6 @@ services:
   api:
     volumes:
       - ./librechat.yaml:/app/librechat.yaml
-    environment:
-      - MONGO_URI=${MONGO_URI}
 
 # # BUILD FROM LATEST IMAGE
 #   api:
@@ -53,10 +51,10 @@ services:
 #   api:
 #     environment:
 #       - MONGO_URI=${MONGO_URI}
-  mongodb:
-    image: tianon/true
-    command: ""
-    entrypoint: ""
+#   mongodb:
+#     image: tianon/true
+#     command: ""
+#     entrypoint: ""
 
 # # EXPOSE MONGODB PORTS - USE CAREFULLY, THIS MAKES YOUR DATABASE VULNERABLE TO ATTACKS
 #   mongodb:
