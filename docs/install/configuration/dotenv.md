@@ -1,7 +1,7 @@
 ---
 title: ⚙️ Environment Variables
 description: Comprehensive guide for configuring your application's environment with the `.env` file. This document is your one-stop resource for understanding and customizing the environment variables that will shape your application's behavior in different contexts.
-weight: -11
+weight: -12
 ---
 
 # .env File Configuration
@@ -29,16 +29,6 @@ For more info see:
 ---
 
 ## Server Configuration
-
-### Customization
-- Here you can change the app title and footer
-- Uncomment to add a custom footer.
-    - Uncomment and make empty "" to remove the footer.
-
-```bash
-APP_TITLE=LibreChat
-CUSTOM_FOOTER="My custom footer"
-```
 
 ### Port
 
@@ -851,16 +841,29 @@ Mail address for from field. It is **REQUIRED** to set a value here (even if it'
 ```bash
 EMAIL_FROM=noreply@librechat.ai 
 ```
+### UI
 
-### Other
+- **Help and FAQ button:** 
 
-- **Redis:** Redis support is experimental, you may encounter some problems when using it. 
+Empty or commented `HELP_AND_FAQ_URL`, button enabled
 
-> If using Redis, you should flush the cache after changing any LibreChat settings
+`HELP_AND_FAQ_URL=https://example.com`, button enabled and goes to `https://example.com`
+
+`HELP_AND_FAQ_URL=/`, button disabled
 
 ```bash
-REDIS_URI=
-USE_REDIS=
+HELP_AND_FAQ_URL=
+```
+
+- **App title and footer:**
+
+Uncomment to add a custom footer
+
+Uncomment and make empty "" to remove the footer
+
+```bash
+APP_TITLE=LibreChat
+CUSTOM_FOOTER="My custom footer"
 ```
 
 - **Birthday Hat:** Give the AI Icon a Birthday Hat 🥳
@@ -873,4 +876,15 @@ USE_REDIS=
 
 ```bash
 SHOW_BIRTHDAY_ICON=true
+```
+
+### Other
+
+- **Redis:** Redis support is experimental, you may encounter some problems when using it. 
+
+> If using Redis, you should flush the cache after changing any LibreChat settings
+
+```bash
+REDIS_URI=
+USE_REDIS=
 ```
