@@ -12,7 +12,10 @@ services:
   api:
     volumes:
       - ./librechat.yaml:/app/librechat.yaml
-
+    image: librechat
+    build:
+      context: .
+      target: node
 # # BUILD FROM LATEST IMAGE
 #   api:
 #     image: ghcr.io/danny-avila/librechat-dev:latest
